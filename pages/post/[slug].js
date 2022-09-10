@@ -99,11 +99,11 @@ export default function Post(props) {
           <Container className="!pt-0">
             <div className="max-w-screen-md mx-auto ">
               <div className="text-center">
-                <CategoryLabel categories={post.categories} />
+                <CategoryLabel categories={post?.categories} />
               </div>
 
               <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-                {post.title}
+                {post?.title}
               </h1>
 
               <div className="flex justify-center mt-3 space-x-3 text-gray-500 ">
@@ -124,7 +124,7 @@ export default function Post(props) {
                   </div>
                   <div>
                     <p className="text-gray-800 dark:text-gray-400">
-                      {post.author.name}
+                      {post?.author?.name}
                     </p>
                     <div className="flex items-center space-x-2 text-sm">
                       <time
@@ -140,7 +140,7 @@ export default function Post(props) {
                         )}
                       </time>
                       <span>
-                        · {post.estReadingTime || "5"} min read
+                        · {post?.estReadingTime || "5"} min read
                       </span>
                     </div>
                   </div>
