@@ -74,7 +74,7 @@ export default function PostList({ post, aspect, preloadImage }) {
         <div className="flex items-center mt-3 space-x-3 text-gray-500 dark:text-gray-400">
           <div className="flex items-center gap-3">
             <div className="relative flex-shrink-0 w-5 h-5">
-              {post.author.image && (
+              {post?.author?.image && (
                 <Image
                   src={AuthorimageProps.src}
                   blurDataURL={AuthorimageProps.blurDataURL}
@@ -88,7 +88,7 @@ export default function PostList({ post, aspect, preloadImage }) {
                 />
               )}
             </div>
-            <span className="text-sm">{post.author.name}</span>
+            <span className="text-sm">{post?.author?.name}</span>
           </div>
           <span className="text-xs text-gray-300 dark:text-gray-600">
             &bull;
