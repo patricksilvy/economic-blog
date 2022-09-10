@@ -46,10 +46,10 @@ export default function Contact({ siteconfig }) {
     <Layout {...siteconfig}>
       <Container>
         <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-          Contact
+          Contato
         </h1>
         <div className="text-center">
-          <p className="text-lg">We are a here to help.</p>
+          <p className="text-lg">Estamos aqui para ajudar.</p>
         </div>
 
         <div className="grid my-10 md:grid-cols-2">
@@ -58,15 +58,11 @@ export default function Contact({ siteconfig }) {
               Contact Stablo
             </h2>
             <p className="max-w-sm mt-5">
-              Have something to say? We are here to help. Fill up the
-              form or send email or call phone.
+              Tem algo a dizer? Estamos aqui para ajudar. 
+              Preencha o formulário ou envie email ou telefone.
             </p>
 
             <div className="mt-5">
-              <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
-                <LocationMarkerIcon className="w-4 h-4" />
-                <span>1734 Sanfransico, CA 93063</span>
-              </div>
               {siteconfig?.email && (
                 <div className="flex items-center mt-2 space-x-2 text-dark-600 dark:text-gray-400">
                   <MailIcon className="w-4 h-4" />
@@ -97,7 +93,7 @@ export default function Contact({ siteconfig }) {
               <div className="mb-5">
                 <input
                   type="text"
-                  placeholder="Full Name"
+                  placeholder="Nome Completo"
                   autoComplete="false"
                   className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
                     errors.name
@@ -105,7 +101,7 @@ export default function Contact({ siteconfig }) {
                       : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
                   }`}
                   {...register("name", {
-                    required: "Full name is required",
+                    required: "Nome completo é um requisito",
                     maxLength: 80
                   })}
                 />
@@ -123,7 +119,7 @@ export default function Contact({ siteconfig }) {
                 <input
                   id="email_address"
                   type="email"
-                  placeholder="Email Address"
+                  placeholder="Endereço de Email"
                   name="email"
                   autoComplete="false"
                   className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white rounded-md outline-none dark:placeholder:text-gray-200 dark:bg-gray-900   focus:ring-4  ${
@@ -132,7 +128,7 @@ export default function Contact({ siteconfig }) {
                       : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
                   }`}
                   {...register("email", {
-                    required: "Enter your email",
+                    required: "Digite seu email",
                     pattern: {
                       value: /^\S+@\S+$/i,
                       message: "Please enter a valid email"
@@ -149,14 +145,14 @@ export default function Contact({ siteconfig }) {
               <div className="mb-3">
                 <textarea
                   name="message"
-                  placeholder="Your Message"
+                  placeholder="Sua Mensagem"
                   className={`w-full px-4 py-3 border-2 placeholder:text-gray-800 dark:text-white dark:placeholder:text-gray-200 dark:bg-gray-900   rounded-md outline-none  h-36 focus:ring-4  ${
                     errors.message
                       ? "border-red-600 focus:border-red-600 ring-red-100 dark:ring-0"
                       : "border-gray-300 focus:border-gray-600 ring-gray-100 dark:border-gray-600 dark:focus:border-white dark:ring-0"
                   }`}
                   {...register("message", {
-                    required: "Enter your Message"
+                    required: "Digite sua mensagem"
                   })}
                 />
                 {errors.message && (
@@ -189,7 +185,7 @@ export default function Contact({ siteconfig }) {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
                 ) : (
-                  "Send Message"
+                  "Enviar Mensagem"
                 )}
               </button>
             </form>

@@ -9,37 +9,24 @@ import { myLoader } from "@utils/all";
 export default function Navbar(props) {
   const leftmenu = [
     {
-      label: "Home",
+      label: "Início",
       href: "/"
     },
     {
-      label: "About",
+      label: "Artigos",
+      href: "/archive"
+    },
+    {
+      label: "Sobre",
       href: "/about"
     },
     {
-      label: "Contact",
+      label: "Contato",
       href: "/contact"
     }
   ];
 
-  const rightmenu = [
-    {
-      label: "Archive",
-      href: "/archive"
-    },
-    {
-      label: "Github",
-      href: "https://github.com/web3templates/stablo",
-      external: true
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
-    }
-  ];
-
-  const mobilemenu = [...leftmenu, ...rightmenu];
+  const mobilemenu = [...leftmenu];
 
   return (
     <Container>
@@ -48,18 +35,10 @@ export default function Navbar(props) {
           {({ open }) => (
             <>
               <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap">
-                <div className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
-                  {leftmenu.map((item, index) => (
-                    <Link href={item.href} key={index}>
-                      <a className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
-                        {item.label}
-                      </a>
-                    </Link>
-                  ))}
-                </div>
-                <div className="flex justify-between items-center w-full md:w-auto">
+
+              <div className="flex justify-between items-center w-full md:w-auto">
                   <Link href="/">
-                    <a className="w-28 dark:hidden">
+                    <a className="dark:hidden">
                       {props.logo ? (
                         <Image
                           {...GetImage(props.logo)}
@@ -75,7 +54,7 @@ export default function Navbar(props) {
                     </a>
                   </Link>
                   <Link href="/">
-                    <a className="hidden w-28 dark:block">
+                    <a className="hidden dark:block">
                       {props.logoalt ? (
                         <Image
                           {...GetImage(props.logoalt)}
@@ -114,18 +93,16 @@ export default function Navbar(props) {
                   </Disclosure.Button>
                 </div>
 
-                <div className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
-                  {rightmenu.map((item, index) => (
+                <div className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1 gap-10">
+                  {leftmenu.map((item, index) => (
                     <Link href={item.href} key={index}>
-                      <a
-                        className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
-                        target={item.external ? "_blank" : ""}
-                        rel={item.external ? "noopener" : ""}>
+                      <a className="py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
                         {item.label}
                       </a>
                     </Link>
                   ))}
                 </div>
+
               </div>
               <Disclosure.Panel>
                 <div className="flex flex-col items-center justify-start order-2 w-full md:hidden">
