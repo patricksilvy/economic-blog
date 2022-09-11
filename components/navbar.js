@@ -38,37 +38,16 @@ export default function Navbar(props) {
 
               <div className="flex justify-between items-center w-full md:w-auto">
                   <Link href="/">
-                    <a className="dark:hidden">
-                      {props.logo ? (
-                        <Image
-                          {...GetImage(props.logo)}
-                          alt="Logo"
-                          sizes="(max-width: 640px) 100vw, 200px"
-                          priority={true}
-                        />
-                      ) : (
-                        <span className="block text-center">
-                          Stablo
-                        </span>
-                      )}
+                    <a className="flex items-center gap-2 dark:hidden">
+                      <img
+                        src={'/img/Icon.png'}
+                        alt="Logo"
+                        width={80}
+                      />
+                      <h1 className="logo hidden md:inline">Economic Lisboa</h1>
                     </a>
                   </Link>
-                  <Link href="/">
-                    <a className="hidden dark:block">
-                      {props.logoalt ? (
-                        <Image
-                          {...GetImage(props.logoalt)}
-                          alt="Logo"
-                          sizes="(max-width: 640px) 100vw, 200px"
-                          priority={true}
-                        />
-                      ) : (
-                        <span className="block text-center">
-                          Stablo
-                        </span>
-                      )}
-                    </a>
-                  </Link>
+
                   <Disclosure.Button
                     aria-label="Toggle Menu"
                     className="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-blue-500 focus:outline-none dark:text-gray-300 ">

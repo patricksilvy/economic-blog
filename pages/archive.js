@@ -59,7 +59,7 @@ export default function Post(props) {
             }}
           />
           <Container>
-            <h1 className="text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+            <h1 className="text-3xl tracking-tight text-center lg:leading-snug text-brand-primary lg:text-6xl dark:text-white">
               Artigos
             </h1>
             <div className="text-center">

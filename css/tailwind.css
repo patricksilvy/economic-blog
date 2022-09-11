@@ -3,3 +3,12 @@
 @tailwind utilities;
 
 /*Custom Styles Here*/
+
+h1 {
+    font-family: 'Karma', serif;
+    /* font-size: 80px; */
+}
+
+.logo {
+    font-size: 20px;
+}

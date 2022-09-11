@@ -8,11 +8,11 @@ export default function About({ authors, siteconfig }) {
   return (
     <Layout {...siteconfig}>
       <Container>
-        <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-          About
+        <h1 className="mt-2 mb-3 text-3xl tracking-tight text-center lg:leading-snug text-brand-primary lg:text-6xl dark:text-white">
+          Sobre
         </h1>
         <div className="text-center">
-          <p className="text-lg">We are a small passionate team.</p>
+          <p className="text-lg">Aprenda economia do jeito certo.</p>
         </div>
 
         <div className="flex justify-center w-full my-14">
