@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
 import Layout from "@components/layout";
 import Container from "@components/container";
